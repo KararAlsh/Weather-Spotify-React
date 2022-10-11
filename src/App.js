@@ -1,7 +1,7 @@
 import React from 'react';
-import axios from 'axios'
+// import axios from 'axios'
 import './App.css'
-import Playlist from "./Playlist.js"
+// import Playlist from "./Playlist.js"
 import {getWeather, getBackgroundVideo, getCity} from "./weatherFunctions"
 import { loginEndpoint, searchPlaylists, getRandomPlaylist, checkIsLoggedIn } from './spotifyFunctions'
 import SunSpinner from './SunSpinner.js'
