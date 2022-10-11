@@ -90,17 +90,17 @@ class App extends React.Component {
 				currentWeather.weather = 'Cloudy'
 			}
 
-			let spotifyData = await searchPlaylists(currentWeather.weather)
-			//
-			// console.log(playlists)
-			//
-		  let playlistID = await getRandomPlaylist(spotifyData)
-			this.setState({
-				playlistID: playlistID
-			})
+			if (loggedIn) {
+					let spotifyData = await searchPlaylists(currentWeather.weather)
+				//
+				// console.log(playlists)
+				//
+			  let playlistID = await getRandomPlaylist(spotifyData)
+				this.setState({
+					playlistID: playlistID
+				})
+			}
 }
-
-
 	render() {
 		console.log(this.state.loggedIn);
 		return (
@@ -112,19 +112,19 @@ class App extends React.Component {
 			)}
 				<div className="container">
 					<div className="top">
-						<column>
+						<div>
 						<div className="location">
 							<p>Current Weather Conditions in {this.state.city || this.state.locality}, {this.state.country}</p>
 						</div>
 						<div className="temp">
 							<h1>{this.state.temp}°C</h1>
 						</div>
-						</column>
-						<column>
+						</div>
+						<div>
 						<div className="description bold">
 							{this.state.weather}
 						</div>
-						</column>
+						</div>
 					</div>
 
 					<>
@@ -142,7 +142,7 @@ class App extends React.Component {
 					        width={'100%'}
 					        height={'300'}
 					        frameBorder={0}
-					        allow={true}
+					        allow={'true'}
 					      />
 							)}
 
