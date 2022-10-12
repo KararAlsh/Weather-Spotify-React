@@ -110,7 +110,12 @@ class App extends React.Component {
 					<source src={this.state.video} type="video/mp4" />
 				</video>
 			)}
+			 <div className="logo">
+					<img className="logo"
+						src="/logo.png"/>
+			 </div>
 				<div className="container">
+
 					<div className="top">
 						<div>
 						<div className="location">

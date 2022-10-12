@@ -1,3 +1,11 @@
+.logo {
+	border-radius: 100px;
+	height: 65px;
+}
+
+img.logo {
+	margin: 20px;
+}
 
 .grid {
 	margin-left: auto;
