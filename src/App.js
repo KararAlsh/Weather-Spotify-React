@@ -144,7 +144,7 @@ class App extends React.Component {
 					        title="Spotify Web Player"
 					        src={`https://open.spotify.com/embed/playlist/${this.state.playlistID}`}
 					        width={'100%'}
-					        height={'300'}
+					        height={'200'}
 					        frameBorder={0}
 					        allow={'true'}
 					      />
