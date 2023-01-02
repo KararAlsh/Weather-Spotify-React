@@ -40,21 +40,22 @@ export const getBackgroundVideo = async (weather) => {
 		 return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664964636/weather-music/clouds-day.mp4"
 	}
 	else if
-		(weather === "thunderstorm") {
+		(weather === "Thunderstorm") {
 			return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664966149/weather-music/thunderstorm.mp4"
 	} else if
-		(weather === "drizzle") {
+		(weather === "Drizzle") {
 			return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664964629/weather-music/drizzle.mp4"
 	} else if
-		(weather === "rain") {
+		(weather === "Rain") {
 			return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664964633/weather-music/rain.mp4"
 	} else if
-		(weather === "snow") {
+		(weather === "Snow") {
 			return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664964638/weather-music/snow.mp4"
 	} else if
-		(weather === "clear") {
+		(weather === "Clear") {
 			return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664963088/weather-music/sunny.mp4"
-	} else {
+	}
+	else {
 		 return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664964639/weather-music/clear-night.mp4"
 	}
 }
