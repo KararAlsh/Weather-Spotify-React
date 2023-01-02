@@ -1,32 +1,37 @@
 import axios from 'axios'
 
+
+export const getCity = async (a, b) => {
+	console.log("getting city...")
+
+	let reverseGeo = await axios.get(`https://api.bigdatacloud.net/data/reverse-geocode-client`)
+	console.log(JSON.stringify(reverseGeo.data, null, 2))
+
+
+	return {
+		// city: reverseGeo.data.city,
+		locality: reverseGeo.data.locality,
+		country: reverseGeo.data.countryName
+	}
+}
+
+
+
 //Gets the current weather (pass results of getlocation)
 export const getWeather = async (a, b) => {
 	console.log("getting weather...")
 
-	let openweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&units=metric&appid=7217d8925634726c87adcf087ea90583`)
-	// console.log(JSON.stringify(openweather.data, null, 2))
+	let openweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${a}&lon=${b}&units=metric&appid=7217d8925634726c87adcf087ea90583
+`)
+	console.log(JSON.stringify(openweather.data, null, 2))
 
 	return {
 		weather: openweather.data.weather[0].main,
 		temp: Math.floor(openweather.data.main.temp),
 		feelsLike: Math.floor(openweather.data.main.feels_like),
 		humidity: openweather.data.main.humidity,
-		windspeed: Math.floor(openweather.data.wind.speed)
-	}
-}
-
-export const getCity = async (a, b) => {
-	console.log("getting city...")
-
-	let reverseGeo = await axios.get(`https://api.bigdatacloud.net/data/reverse-geocode-client`)
-	// console.log(JSON.stringify(reverseGeo.data, null, 2))
-
-
-	return {
-		city: reverseGeo.data.city,
-		locality: reverseGeo.data.locality,
-		country: reverseGeo.data.countryName
+		windspeed: Math.floor(openweather.data.wind.speed),
+		city: openweather.data.name
 	}
 }
 

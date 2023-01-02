@@ -44,9 +44,9 @@ class App extends React.Component {
 
 	async loadPage() {
 			// WEATHER
-	  	let currentWeather = await getWeather(this.state.latitude, this.state.longitude)
+	  	let currentCity = await getCity(this.state.latitude, this.state.longitude)
 
-			let currentCity = await getCity(this.state.latitude, this.state.longitude)
+			let currentWeather = await getWeather(this.state.latitude, this.state.longitude)
 
 			this.setState({
 				weather: currentWeather.weather,
