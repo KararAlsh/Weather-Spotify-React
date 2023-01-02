@@ -1,6 +1,7 @@
 .logo {
-	border-radius: 100px;
-	height: 65px;
+	border-radius: 25px;
+	height: 100px;
+	text-align: center;
 }
 
 img.logo {
