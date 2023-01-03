@@ -53,7 +53,7 @@ export const getBackgroundVideo = async (weather) => {
 			return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664964638/weather-music/snow.mp4"
 	} else if
 		(weather === "Clear") {
-			return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664963088/weather-music/sunny.mp4"
+			return "https://res.cloudinary.com/dsoaa2syf/video/upload/v1672757107/video_2_tqcb4s.mp4"
 	}
 	else {
 		 return "https://res.cloudinary.com/djxvdruvu/video/upload/v1664964639/weather-music/clear-night.mp4"
